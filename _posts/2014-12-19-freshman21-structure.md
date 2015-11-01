@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Theme structure
+title: Custom error pages with Spring Boot.
 modified: 2014-12-19
 categories: [tutorial]
 tags: 
