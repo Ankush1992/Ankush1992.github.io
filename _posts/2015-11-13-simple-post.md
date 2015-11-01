@@ -106,11 +106,11 @@ public class ErrorService {
 I have  demonstrated with  only four error codes, but you get the idea  . We put error codes and error messages as key value pairs inside our property file. Place the property file inside the resources folder.
 
 ```
+
 400=Bad Request.
 401=Unauthorized
 404=Not Found.
 405=Method Not Allowed
-
 
 500=Internal Server Error
 
