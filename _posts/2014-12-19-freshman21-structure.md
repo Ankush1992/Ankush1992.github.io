@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Custom error pages with Spring Boot.
-modified: 2014-12-19
+title: Custom error pages with Spring Boot
 categories: [tutorial]
 tags: 
   - spring
