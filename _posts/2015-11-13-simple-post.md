@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Sample Post
-excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
+title: Custom error pages with Spring Boot
 categories: articles
-tags: [sample-post]
+tags: [spring-boot]
 comments: true
 ---
 
