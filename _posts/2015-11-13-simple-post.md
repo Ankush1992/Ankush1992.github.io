@@ -110,6 +110,6 @@ One of the regular requirement for any website / web app is to built custom erro
 
 
 
-Download the sample  [here](https://github.com/Ankush1992/sample-boot-error-pages).
+<!--Download the sample  [here](https://github.com/Ankush1992/sample-boot-error-pages).-->
 
-here is a <q> q tag </q>
+<!--here is a <q> q tag </q>-->
