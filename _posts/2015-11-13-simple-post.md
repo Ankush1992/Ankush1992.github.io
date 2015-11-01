@@ -44,6 +44,7 @@ Spring Boot starters (spring-boot-starter-web in particular) comes with an embed
 We are routing tomcat to the  `/errors` mapping in such an event. As error codes are something very generic to an application,it is a good idea to create a whole new Controller for it.
 
 {% highlight java %}
+
 @Controller
 public class ErrorController {
 
@@ -68,11 +69,13 @@ public class ErrorController {
 	   return (int) request.getAttribute("javax.servlet.error.status_code");
    }
 }
+
 {% endhighlight %}
 
 We capture the Http error code in the `error_code` variable , and create another service  to generate some error message based on the error code.
 
 {% highlight java %}
+
 @Service
 @PropertySource("classpath:httpErrorCodes.properties")
 public class ErrorService {
@@ -97,6 +100,7 @@ public class ErrorService {
 		   return message;
 	}
 }
+
 {% endhighlight %}
 
 I have  demonstrated with  only four error codes, but you get the idea  . We put error codes and error messages as key value pairs inside our property file. Place the property file inside the resources folder.
