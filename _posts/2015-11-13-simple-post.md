@@ -5,111 +5,120 @@ categories: articles
 tags: [spring-boot]
 comments: true
 ---
+NEW
 
-If you are like me ,and loathe XML configurations with a passion , and have been using Spring MVC for a while or deciding which framework to use for your next project , then you are in for a treat. Spring Boot is a great web framework based on the philosophy of convention over configuration , backed by the goodness of the entire Spring ecosystem ,and does not mandate a single line of XML. How about that ! 
+This is a sample post.
 
-One of the regular requirement for any website / web app is to built custom error pages. These pages can be plain white pages that only show the error message with its Http error code (which is what are going to do ) or some fancy page displaying the error message.
-
-<!--Consider the following snippet :-->
-
-<!--{% highlight java %}-->
-
-<!--@SpringBootApplication-->
-<!--public class SampleBootErrorPagesApplication {-->
-	
-<!--   private static final String LOCATION = "/errors";-->
-
-<!--   public static void main(String[] args) {-->
-<!--       SpringApplication.run(SampleBootErrorPagesApplication.class, args);-->
-<!--   }-->
-    
-<!--    @Bean-->
-<!--    public EmbeddedServletContainerCustomizer containerCustomizer() {-->
-<!--      return (container -> {-->
-<!--   	   //route all errors towards /error .-->
-<!--   	   final ErrorPage errorPage=new ErrorPage(LOCATION);-->
-<!--   	   container.addErrorPages(errorPage);-->
-<!--      });-->
-<!--   }-->
-<!-- }-->
-<!--{% endhighlight %}-->
-
-<!--Spring Boot starters (spring-boot-starter-web in particular) comes with an embedded tomcat container. When any exception is thrown by our handler methods that we DO NOT CATCH IMPLICITLY (a topic for another post) ,  the web container would look for ways to handle this exception . It looks for such configurations  inside the web.xml file .-->
-
-<!--We are routing tomcat to visit the `/errors` mapping in such an event. Let's go ahead and create the ErrorController.-->
-
-<!--{% highlight java %}-->
-<!--@Controller-->
-<!--public class ErrorController {-->
-
-<!--   @Autowired-->
-<!--   private ErrorService errorService;-->
-	     
-<!--   @RequestMapping(value="/errors",method=RequestMethod.GET)-->
-<!--   public String renderErrorPage(final Model model,final HttpServletRequest request){-->
-	   
-<!--	   //Get the Http error code.-->
-<!--	   final int error_code=getHttpStatusCode(request);-->
-	   
-<!--	   //Generates Error message for corresponding Http Error Code.-->
-<!--	   final String error_message=errorService.generateErrorMessage(error_code);-->
-	   
-<!--	   model.addAttribute("errorMsg",error_message);-->
-	   
-<!--	   return "error";-->
-<!--   }  -->
-	   
-<!--   private int getHttpStatusCode(final HttpServletRequest request){-->
-<!--	   return (int) request.getAttribute("javax.servlet.error.status_code");-->
-<!--   }-->
-<!--}-->
-<!--{% endhiglight %}-->
-
-<!--We capture the Http error code in the `error_code` variable , and create another service  to generate some error message based on the error code.-->
-
-<!--{% highlight java %}-->
-<!--@Service-->
-<!--@PropertySource("classpath:httpErrorCodes.properties")-->
-<!--public class ErrorService {-->
-	
-<!--	@Autowired-->
-<!--	private Environment env;-->
-
-<!--	public String generateErrorMessage(final int error_code){-->
-<!--		 String message="";-->
-<!--		   switch(error_code){  -->
-<!--			   case 400: message=env.getProperty("400");-->
-<!--			   			 break;-->
-<!--			   case 401: message=env.getProperty("401");-->
-<!--			   			 break;-->
-<!--			   case 404: message=env.getProperty("404");-->
-<!--			   			 break;-->
-<!--			   case 500: message=env.getProperty("500");-->
-<!--			   			 break;-->
-<!--			   //etc -->
-<!--			   //Put in all Http error codes here.-->
-<!--		   }-->
-<!--		   return message;-->
-<!--	}-->
-<!--}-->
-<!--{% endhighlight %}-->
-
-<!--I have  demonstrated with  only four error codes, but you get the idea  . We put error codes and error messages as key value pairs inside our property file. Place the property file inside the resources folder.-->
-
-<!--```-->
-<!--400=Bad Request.-->
-<!--401=Unauthorized-->
-<!--404=Not Found.-->
-<!--405=Method Not Allowed-->
-
-
-<!--500=Internal Server Error-->
-
-<!--```-->
+Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
 
 
 
-<!--Download the sample  [here](https://github.com/Ankush1992/sample-boot-error-pages).-->
+## Heading
 
-<!--here is a <q> q tag </q>-->
+~~~
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+~~~
+
+
+
+## Body text
+
+**This is strong**.
+
+This is figure
+
+![Elaphurus davidianus](https://i.imgur.com/Mdc4szJl.jpg "Père David's deer")
+
+*This is emphasized*.
+
+ 53 = 125. Water is H<sub>2</sub>O. 
+
+The New York Times <cite>(That’s a citation)</cite>. 
+
+<u>Underline</u>. 
+
+
+<del>HTML and CSS are our tools</del>. 
+
+## Blockquotes
+
+> Justification:
+> This species is listed as Extinct in the Wild, as all populations are still under captive management. The captive population in China has increased in recent years, and the possibility remains that free-ranging populations can be established some time in the near future. When that happens, its Red List status will need to be reassessed. 
+
+> I follow up the quest. Despite of day and night and death and hell.
+> <center> -- Idylls of the King, Tennyson </center>
+
+
+
+## List Types
+
+### Ordered Lists
+
+1. Item one
+   1. sub item one
+   2. sub item two
+   3. sub item three
+2. Item two
+
+### Unordered Lists
+
+* Item one
+* Item two
+* Item three
+
+## Tables
+
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+| cell7   | cell8   | cell9   |
+
+
+| Kingdom | Phylum  | Class | Order | Family |
+|:------:|:------:|:------:|:------:|:------:| 
+|ANIMALIA|CHORDATA|MAMMALIA|CETARTIODACTYLA|CERVIDAE|
+
+
+## Code Snippets
+
+Syntax highlighting via Pygments
+
+{% highlight css %}
+#container {
+  float: left;
+  margin: 0 -240px 0 0;
+  width: 100%;
+}
+{% endhighlight %}
+
+
+#### highlight with line number.
+
+{% highlight ruby linenos  %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
+
+## $$\LaTeX$$ 
+
+you can use latex with <q>double $$ </q>
+
+$$e^{i\pi}+1=0$$
+
+
+## \<q\> tag
+
+here is a \<q\> q tag \</q\>
+
+
+here is a <q> q tag </q>
