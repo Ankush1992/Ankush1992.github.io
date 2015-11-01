@@ -68,7 +68,7 @@ public class ErrorController {
 	   return (int) request.getAttribute("javax.servlet.error.status_code");
    }
 }
-{% endhiglight %}
+{% endhighlight %}
 
 We capture the Http error code in the `error_code` variable , and create another service  to generate some error message based on the error code.
 
