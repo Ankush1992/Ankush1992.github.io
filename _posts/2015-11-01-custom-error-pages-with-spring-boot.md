@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom error pages with Spring Boot
-categories: articles
+categories: tutorial
 tags: [spring-boot]
 comments: true
 ---
@@ -105,7 +105,7 @@ public class ErrorService {
 
 I have  demonstrated with  only four error codes, but you get the idea  . We put error codes and error messages as key value pairs inside our property file. Place the property file inside the resources folder.
 
-```
+~~~
 
 400=Bad Request.
 401=Unauthorized
@@ -114,7 +114,7 @@ I have  demonstrated with  only four error codes, but you get the idea  . We put
 
 500=Internal Server Error
 
-```
+~~~
 
 Run the program . Type any random URL that comes to mind(that is not defined as a RequestMapping) .You should see the following:
 
