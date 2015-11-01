@@ -10,7 +10,6 @@ If you are like me ,and loathe XML configurations with a passion , and have been
 
 One of the regular requirement for any website / web app is to built custom error pages. These pages can be plain white pages that only show the error message with its Http error code (which is what are going to do ) or some fancy page displaying the error message.
 
-Here is the directory structure :
 
 ![directory](https://cloud.githubusercontent.com/assets/7692552/10869162/ec15e896-80cb-11e5-8eaa-27161194aeb8.png "Directory")
 
