@@ -9,7 +9,7 @@ comments: true
 aaaahngjghn
 
 
-{% highlight groovy %}
+{% highlight java %}
 
 	@RequestMapping(value="/",method=RequestMethod.POST)
 	def uploadImg(@RequestParam("file") MultipartFile file , BindingResult result)
