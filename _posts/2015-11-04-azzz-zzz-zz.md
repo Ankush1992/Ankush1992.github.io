@@ -6,7 +6,7 @@ tags: [spring-boot]
 comments: true
 --- 
 
-ank
+anku
 
 
 {% highlight groovy %}
@@ -15,8 +15,8 @@ ank
 def uploadImg(@RequestParam("file") MultipartFile file , BindingResult result)
 {
 	def thumbnail =new Thumbnail(file :file ,
-					   width: ThumbnailConstants.SCALED_WIDTH,
-					   height:ThumbnailConstants.SCALED_HEIGHT)
+				     width: ThumbnailConstants.SCALED_WIDTH,
+				     height:ThumbnailConstants.SCALED_HEIGHT)
 	thumbnailValidator.validate(thumbnail,result)	
 	
 	try{
