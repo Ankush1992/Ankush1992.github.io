@@ -21,12 +21,12 @@ def uploadImg(@RequestParam("file") MultipartFile file , BindingResult result)
 	
 	try{
 		if(!result.hasErrors()){
-			  new ResponseEntity(thumbnailService.resizeAndSave(thumbnail),
-				  				 HttpStatus.OK)
+			  new ResponseEntity(thumbnailService.resizeAndSave(thumbnail)
+				  	     ,HttpStatus.OK)
 		}
 		else{
-			 new ResponseEntity(errorService.listErrors(msgSource,result)
-				 			   ,HttpStatus.BAD_REQUEST)
+			 new ResponseEntity(errorService.listErrors(msgSource,result),
+				            ,HttpStatus.BAD_REQUEST)
 		}
 		
 	}catch(ex){
