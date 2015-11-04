@@ -18,7 +18,6 @@ def uploadImg(@RequestParam("file") MultipartFile file , BindingResult result)
 				     width: ThumbnailConstants.SCALED_WIDTH,
 				     height:ThumbnailConstants.SCALED_HEIGHT)
 	thumbnailValidator.validate(thumbnail,result)	
-	
 	try{
 		if(!result.hasErrors()){
 			  new ResponseEntity(thumbnailService.resizeAndSave(thumbnail)
@@ -28,12 +27,9 @@ def uploadImg(@RequestParam("file") MultipartFile file , BindingResult result)
 			 new ResponseEntity(errorService.listErrors(msgSource,result),
 				            ,HttpStatus.BAD_REQUEST)
 		}
-		
 	}catch(ex){
 		log.error("Unexpected error " ,ex)
 		new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR)
-		
 	}
 }
-	
 {% endhighlight %}
