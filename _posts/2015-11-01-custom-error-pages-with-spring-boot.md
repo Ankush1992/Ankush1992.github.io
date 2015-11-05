@@ -27,7 +27,6 @@ public class SampleBootErrorPagesApplication {
    public static void main(String[] args) {
        SpringApplication.run(SampleBootErrorPagesApplication.class, args);
    }
-    
     @Bean
     public EmbeddedServletContainerCustomizer containerCustomizer() {
       return (container -> {
@@ -61,15 +60,12 @@ public class ErrorController {
 	   final String error_message=errorService.generateErrorMessage(error_code);
 	   
 	   model.addAttribute("errorMsg",error_message);
-	   
 	   return "error";
    }  
-	   
    private int getHttpStatusCode(final HttpServletRequest request){
 	   return (int) request.getAttribute("javax.servlet.error.status_code");
    }
 }
-
 {% endhighlight %}
 
 We capture the Http error code in the `error_code` variable , and create another service  to generate some error message based on the error code.
@@ -113,7 +109,6 @@ I have  demonstrated with  only four error codes, but you get the idea  . We put
 405=Method Not Allowed
 
 500=Internal Server Error
-
 ~~~
 
 Run the program . Type any random URL that comes to mind(that is not defined as a RequestMapping) .You should see the following:
