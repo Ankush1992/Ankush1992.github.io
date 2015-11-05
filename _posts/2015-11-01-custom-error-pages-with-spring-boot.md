@@ -22,7 +22,7 @@ Consider the following snippet :
 @SpringBootApplication
 public class SampleBootErrorPagesApplication {
 	
-   private static final String LOCATION = "/errors";
+   private static final String PATH = "/errors";
 
    public static void main(String[] args) {
        SpringApplication.run(SampleBootErrorPagesApplication.class, args);
@@ -31,7 +31,7 @@ public class SampleBootErrorPagesApplication {
     public EmbeddedServletContainerCustomizer containerCustomizer() {
       return (container -> {
    	   //route all errors towards /error .
-   	   final ErrorPage errorPage=new ErrorPage(LOCATION);
+   	   final ErrorPage errorPage=new ErrorPage(PATH);
    	   container.addErrorPages(errorPage);
       });
    }
