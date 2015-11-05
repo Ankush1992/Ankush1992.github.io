@@ -21,7 +21,6 @@ Consider the following snippet :
 
 @SpringBootApplication
 public class SampleBootErrorPagesApplication {
-	
    private static final String LOCATION = "/errors";
 
    public static void main(String[] args) {
@@ -61,10 +60,8 @@ public class ErrorController {
 	   final String error_message=errorService.generateErrorMessage(error_code);
 	   
 	   model.addAttribute("errorMsg",error_message);
-	   
 	   return "error";
    }  
-	   
    private int getHttpStatusCode(final HttpServletRequest request){
 	   return (int) request.getAttribute("javax.servlet.error.status_code");
    }
@@ -98,7 +95,7 @@ public class ErrorService {
 		   //Put in all Http error codes here.
 	   }
 	 return message;
-       }
+    }
 }
 
 {% endhighlight %}
