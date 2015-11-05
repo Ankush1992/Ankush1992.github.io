@@ -21,17 +21,17 @@ Consider the following snippet :
 
 @SpringBootApplication
 public class SampleBootErrorPagesApplication {
-   private static final String LOCATION = "/errors";
+	
+   private static final String PATH = "/errors";
 
    public static void main(String[] args) {
        SpringApplication.run(SampleBootErrorPagesApplication.class, args);
    }
-    
     @Bean
     public EmbeddedServletContainerCustomizer containerCustomizer() {
       return (container -> {
    	   //route all errors towards /error .
-   	   final ErrorPage errorPage=new ErrorPage(LOCATION);
+   	   final ErrorPage errorPage=new ErrorPage(PATH);
    	   container.addErrorPages(errorPage);
       });
    }
@@ -66,7 +66,6 @@ public class ErrorController {
 	   return (int) request.getAttribute("javax.servlet.error.status_code");
    }
 }
-
 {% endhighlight %}
 
 We capture the Http error code in the `error_code` variable , and create another service  to generate some error message based on the error code.
@@ -110,7 +109,6 @@ I have  demonstrated with  only four error codes, but you get the idea  . We put
 405=Method Not Allowed
 
 500=Internal Server Error
-
 ~~~
 
 Run the program . Type any random URL that comes to mind(that is not defined as a RequestMapping) .You should see the following:
