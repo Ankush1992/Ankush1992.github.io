@@ -1,6 +1,6 @@
 ### Site info:
 title: Ankush Sharma's Blog
-tagline: Web Dev for the sane.
+tagline: Web Development for the sane.
 author: Ankush Sharma
 email: ankush20058@gmail.com
 description: "Web Development for the Sane." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
@@ -10,6 +10,7 @@ locale: en_US
 ### Personal info and site tools info:
 github_username:  Ankush1992
 disqus_shortname: ankush1992
+linkedin:  "https://in.linkedin.com/in/ankush-sharma-071208a8"
 favicon:     "/images/favicon.ico"
 # aboutme: Do not like short about me's.
 # aboutme_photo: https://cloud.githubusercontent.com/assets/7692552/10979006/ffe995dc-841f-11e5-891b-4f294acaeacb.jpg
