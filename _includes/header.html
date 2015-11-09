@@ -7,21 +7,22 @@
     
     {% if site.ShowContactInfo == "True" %}
 
-
+<center>
     {% if site.email != empty %}
-    <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">Email
+    <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">
         <i class="fa fa-envelope-square fa-3x"></i>
     </a>
     |
     {% endif %}
     {% if site.github_username != empty %}
-    <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}">Github
+    <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}">
                 <i class="fa fa-github-square fa-3x"></i>
     </a> |
     {% endif %}
 
     {% endif %}
-    
+</center>
+
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
