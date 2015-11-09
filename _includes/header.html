@@ -9,10 +9,15 @@
 
 
     {% if site.email != empty %}
-    <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">Email</a> /
+    <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">Email
+        <i class="fa fa-envelope-square fa-3x"></i>
+    </a>
+    |
     {% endif %}
     {% if site.github_username != empty %}
-    <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}">Github</a> /
+    <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}">Github
+                <i class="fa fa-github-square fa-3x"></i>
+    </a> |
     {% endif %}
 
     {% endif %}
