@@ -9,15 +9,23 @@
 
 <center>
     {% if site.email != empty %}
-    <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">
+    <a href="mailto:{{site.email}}" title="mailto: {{site.email}}" target="_blank">
         <i class="fa fa-envelope-square fa-2x"></i>
     </a>
     |
     {% endif %}
     {% if site.github_username != empty %}
-    <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}">
+    <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}" target="_blank">
                 <i class="fa fa-github-square fa-2x"></i>
     </a> 
+    {% endif %}
+    
+    {% if site.linkedin != empty %}
+    <a href="https://in.linkedin.com/in/ankush-sharma-071208a8" title="Linkedin" target="_blank">
+         <i class="fa fa-linkedin-square fa-2x"></i>
+       
+    </a>
+    |
     {% endif %}
 
     {% endif %}
