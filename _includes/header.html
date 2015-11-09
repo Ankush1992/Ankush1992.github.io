@@ -4,7 +4,19 @@
 
     <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
     <h3 class="site-meta">{{ site.tagline }}</h3>
+    
+    {% if site.ShowContactInfo == "True" %}
 
+
+    {% if site.email != empty %}
+    <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">Email</a> /
+    {% endif %}
+    {% if site.github_username != empty %}
+    <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}">Github</a> /
+    {% endif %}
+
+    {% endif %}
+    
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
