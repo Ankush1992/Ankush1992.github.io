@@ -12,7 +12,9 @@ One is a software developer from New Delhi,India .One uses Spring and Java for d
 
 This space on the web shall be devoted to all things programming .One will be talking about anything that interests The One , from everyday web development to One's experimentations with other languages and frameworks.
 
-The One also likes to [read](https://www.goodreads.com/ankushsharma)
+The One also happens to have a B.Sc Degree in Mathematics from The University of Delhi. The One likes to think of  oneself as a Mathematician in another life.
+
+ The One also likes to [read.](https://www.goodreads.com/ankushsharma)
 
 
 
