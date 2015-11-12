@@ -10,7 +10,7 @@ permalink: /about/
 
 One is a software developer from New Delhi,India .One uses Spring and Java for day to day development ,but One is slowly but surely gravitating towards Groovy.One likes to explore multiple languages.One also suffers from several OCD's ,one of them being constant code refactorings.
 
-This space on the web shall be devoted to all things programming .One will be talking about anything that interests The One , from everyday web development to One's experimentations with other languages and frameworks.
+This space on the web shall be devoted to all things programming .The One will be talking about anything that interests The One , from everyday web development to One's experimentations with other languages and frameworks.
 
 The One also happens to have a B.Sc Degree in Mathematics from The University of Delhi. The One likes to think of  oneself as a Mathematician in another life.
 
