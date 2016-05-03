@@ -18,7 +18,7 @@ that makes it so easy to set up Pagination in a Spring boot app in the first pla
 We expose an endpoint `/persons` . It will return a List of persons and other paging info(which we would see in a minute) based on the `page` and `size` parameters that were passed along with it.
 
 For instance , ```/persons?page=0&size=3```  would return a batch of the first  3 persons from the database
-```/persons?page=0&size=3`` would return the next batch . 
+```/persons?page=0&size=3``` would return the next batch . 
 
 To begin with, we create a domain `Person` class . 
 
