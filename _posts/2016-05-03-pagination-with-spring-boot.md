@@ -20,8 +20,6 @@ We expose an endpoint `/persons` . It will return a List of persons and other pa
 For instance , ```/persons?page=0&size=3```  would return a batch of the first  3 persons from the database
 ```/persons?page=0&size=3``` would return the next batch . 
 
-<br>
-
 To begin with, we create a domain `Person` class . 
 
 {% highlight groovy %}
