@@ -21,6 +21,7 @@ favicon:     "https://cloud.githubusercontent.com/assets/7692552/11044617/f8b419
 ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown when ShowContactInfo == True
 default_column: "one" # blog style: two columns, if default_column != "two", you will see a one column blog.
 default_locale: "en" # blog sidebar language set, only include: English(en) and Chinese (cn)
+excerpt_separator: '<br>'
 
 locales:
     en:
