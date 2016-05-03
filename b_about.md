@@ -8,14 +8,15 @@ permalink: /about/
 
 ### Welcome, puny human! 
 
-One is a software developer from New Delhi,India .One uses Spring and Java for day to day development ,but One is slowly but surely gravitating towards Groovy.One likes to explore multiple languages.One also suffers from several OCD's ,one of them being constant code refactorings.
+The One is a Web Developer from New Delhi,India .The One uses Java 8 ,Groovy  and Spring Boot for day to day development .The One is also interested in exploring multiple languages.The flavor of the month is Python . The One also suffers from OCD's ,one of them being constant code refactorings.
 
 This space on the web shall be devoted to all things programming .The One will be talking about anything that interests The One , from everyday web development to One's experimentations with other languages and frameworks.
 
 The One also happens to have a B.Sc Degree in Mathematics from The University of Delhi. The One likes to think of  oneself as a Mathematician in another life.
 
- The One also likes to [read.](https://www.goodreads.com/ankushsharma)
+The One also likes to [read.](https://www.goodreads.com/ankushsharma)
 
+The One is  `Available for hire` .
 
 
  

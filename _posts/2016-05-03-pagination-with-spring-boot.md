@@ -9,11 +9,11 @@ comments: true
 
 In this short tutorial , we'll see how easy it is to set up Pagination in a Spring Boot app . 
 
-## Setup
+#### Setup
 We use Spring Boot 1.3.3.RELEASE , with MySQL as the Database and Spring Data JPA abstraction to work with MySQL. Indeed ,it is the Spring Data JPA module
 that makes it so easy to set up Pagination in a Spring boot app in the first place.
 
-## Scenario
+#### Scenario
 
 We expose an endpoint `/persons` . It will return a List of persons and other paging info(which we would see in a minute) based on the `page` and `size` parameters that were passed along with it.
 
