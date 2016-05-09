@@ -122,5 +122,5 @@ And when you go over to `/home` , the handler method would throw an Exception,wh
 
 
 
-Download the sample  [here](https://github.com/Ankush1992/sample-boot-error-pages).
+Download the sample  [here](https://gitlab.com/ankushs92/sample-boot-error-pages) .
 

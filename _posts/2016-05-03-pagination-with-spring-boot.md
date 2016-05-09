@@ -166,4 +166,4 @@ The snapshot doesn't display the entire JSON. So here it is .
 {% endhighlight %}
 
 
-You can download the sample [here](https://github.com/ankushs92/sample-boot-pagination)
+You can download the sample [here](https://gitlab.com/ankushs92/sample-boot-pagination)
