@@ -15,7 +15,7 @@ twitter : Ankush1092
 favicon:     "https://cloud.githubusercontent.com/assets/7692552/11044617/f8b4196e-8748-11e5-82b8-d56af8915c4c.png"
 # aboutme: Do not like short about me's.
 # aboutme_photo: https://cloud.githubusercontent.com/assets/7692552/10979006/ffe995dc-841f-11e5-891b-4f294acaeacb.jpg
-google_analytics_key :UA-82816777-1
+google_analytics_key: UA-82816777-1
 
 ### Site setting:
 ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown when ShowContactInfo == True
