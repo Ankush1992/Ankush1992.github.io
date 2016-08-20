@@ -82,7 +82,13 @@ interface PersonRepository extends PagingAndSortingRepository<Person,Integer> {
 The PersonRepository class is just an interface. This might be weird for those coming from traditional Spring MVC world wherein you had to write implementation classes , and interacted with the database using Hibernate. Well, you don't need to do that anymore.
 The PagingAndSortingRepository extends the [CrudRepository](http://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html) , thereby adding Paging capabilities .
 
-Now all we need to do is to create a `PersonService` to expose the repository.
+Now all we need to do is to create a `PersonService` interface and `PersonServiceImpl` to expose the repository.
+
+{% highlight groovy %}
+interface PersonService {
+	Page<Person> listAllByPage(Pageable pageable)
+}
+{% endhighlight %}
 
 {% highlight groovy %}
 @Service
