@@ -12,9 +12,9 @@ I am  a Web Developer from New Delhi,India .I use Java 8 ,Groovy  and Spring Boo
 
 This space on the web shall be devoted to all things programming .I will be talking about anything that interests me , from everyday web development to my experimentations with other languages and frameworks.
 
-I also happens to have a B.Sc Degree in Mathematics from The University of Delhi. I likes to think of myself as a Mathematician in another life.
+I also happen to have a B.Sc Degree in Mathematics from The University of Delhi. I like to think of myself as a Mathematician in another life.
 
-I also likes to [read.](https://www.goodreads.com/ankushsharma) 
+I also like to [read.](https://www.goodreads.com/ankushsharma) 
 
 
  
