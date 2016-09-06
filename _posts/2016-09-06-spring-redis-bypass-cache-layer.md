@@ -56,7 +56,6 @@ So far ,so good !
 <br />
 But what if you run into an exception like this :
 `org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException` 
-
 <br />
 
 You can't even make the connection with the Redis server,for god's sakes ! Spring would just throw this exception,and the code inside the `findById(Integer id)` method will never be executed. 
