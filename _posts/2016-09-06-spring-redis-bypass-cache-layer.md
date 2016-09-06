@@ -58,7 +58,7 @@ But what if you run into an exception like this :
 `org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException` 
 <br />
 
-You can't even make the connection with the Redis server,for god's sakes ! Spring would just throw this exception,and the code inside the `findById(Integer id)` method will never be executed. 
+You can't even make the connection with the Redis server,for god's sake ! Spring would just throw this exception,and the code inside the `findById(Integer id)` method will never be executed. 
 This is not ideal behaviour.If something wrong happens with the Cache layer,you should immediately log the exception/error that took place, bypass it altogether, and execute the code inside the `findById(Integer id)` method so that everything functions as normal.
 
 That is easy to do with Spring's [CacheErrorHandler](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/cache/interceptor/CacheErrorHandler.html) .
