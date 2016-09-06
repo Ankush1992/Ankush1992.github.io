@@ -12,6 +12,7 @@ So say we are developing an app with an endpoint `developers/{developerId}` , wh
 So,we have a Developer class :
 
 ```groovy
+
 @Entity
 @Table(name="dev")
 class Developer {
