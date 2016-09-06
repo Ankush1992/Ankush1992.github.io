@@ -10,6 +10,7 @@ Implementing a cache store like Redis or Memcached is a common scenario in web a
 So say we are developing an app with an endpoint `developers/{developerId}` , which gives details about a particular developer with this `{developerId}` .We decide that once the result is fetched from the primary datastore(say MySQL),it is to be immediately cached in Redis.
 
 So,we have a Developer class :
+
 ```groovy
 @Entity
 @Table(name="dev")
@@ -23,7 +24,9 @@ class Developer {
 	String name
 }
 ```
+
 Also,a `DeveloperService` to interact with `DeveloperRepository`.
+
 
 ```groovy
 @Service
