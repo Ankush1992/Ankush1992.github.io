@@ -23,8 +23,11 @@ public class TestController {
 
 
 We proceeed with the following plan:
+
 * Create an annotation `@UserAgent` .
+
 * Implement Spring's [HandlerMethodArgumentResolver](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html) . We call this class `UserAgentAnnotationMethodResolver` .
+
 * Register  `UserAgentAnnotationMethodResolver` with [WebMvcConfigurerAdapter](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.html)
 
 
