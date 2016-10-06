@@ -70,6 +70,7 @@ public class StatusBinder  extends PropertyEditorSupport{
 Now we just register our Binder with Spring's [WebDataBinder](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/WebDataBinder.html) . 
 
 ```java
+
 @RestController
 public class TestController {
 
@@ -82,7 +83,6 @@ public class TestController {
 	public String getStatus(@RequestParam("status") final Status status){
 		return "status is : " + status;
 	}
-
 }
 ```
 
