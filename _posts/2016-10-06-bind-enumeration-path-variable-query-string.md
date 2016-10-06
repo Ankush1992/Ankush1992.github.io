@@ -34,7 +34,7 @@ public enum Status {
 ```
 
 
-Our end result looks like:
+Our end result looks like :
 
 ```java
 @RestController
