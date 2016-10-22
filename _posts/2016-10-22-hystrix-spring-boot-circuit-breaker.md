@@ -56,7 +56,7 @@ Keep running Node A and shut off Node B.
 That's no good ! We want our Node A to keep running and ideally return something in case Node B is down.
 This is where Hystrix comes in . [Here](https://github.com/Netflix/Hystrix/wiki) is an excellent documentation explaining Hystrix in depth.
 
-We set up Hystrix to monitor the calls from Node A to Node B , and execute a fallback method whenever Node B starts to lag.
+We set up Hystrix to monitor the calls from Node A to Node B , and execute a fallback method whenever Node B starts to lag/throw exceptions/shuts down.
 
 Firstly , you need to tell Spring to enable Hystrix : 
 
