@@ -14,7 +14,7 @@ We circumvent this problem by using the Circuit Breaker Pattern.Martin Fowler ha
 
 We will run two apps on localhost , one running on port 8080 and the other on 8081 . The one running on port 8080 will be called `Node A` and the one running on port 8081 `Node B` . For every requests that Node A receives ,it makes a `GET` requests to Node B .
 
-### Case I : Both Node A and Node B are running.
+#### Case I : Both Node A and Node B are running.
 
 Both of our nodes are running normally . 
 We have 2 Controllers, one for our caller ,Node A , and one for our remote service,Node B.
@@ -48,7 +48,7 @@ Open your browser and go over to `localhost:8080/NodeA` . Since both services ar
 
 ![localhost](https://cloud.githubusercontent.com/assets/7692552/19620808/19719260-98a2-11e6-9fb2-a9accd3154ca.png "localhost")
 
-### Case II: Node A is running , but Node B is down / timing out.
+#### Case II: Node A is running , but Node B is down / timing out.
 
 Keep running Node A and shut off Node B. 
 ![localhost](https://cloud.githubusercontent.com/assets/7692552/19620836/9430a8ec-98a2-11e6-91d2-26f38f71129e.png "localhost")
@@ -59,6 +59,7 @@ This is where Hystrix comes in . [Here])(https://github.com/Netflix/Hystrix/wiki
 We set up Hystrix to monitor the calls from Node A to Node B , and execute a fallback method whenever Node B starts to lag.
 
 Firstly , you need to tell Spring to enable Hystrix : 
+
 ```java
 @SpringBootApplication
 @EnableCircuitBreaker
