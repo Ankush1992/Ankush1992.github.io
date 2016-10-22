@@ -94,9 +94,6 @@ public class NodeAController {
 Now go on over to `localhost:8080/NodeA` . You will see :
 ![node a -node b-off](https://cloud.githubusercontent.com/assets/7692552/19620894/01fc5956-98a4-11e6-907c-06a833bef879.png)
 
-
-Hystrix monitors 
-
 Very good. Lets consider another more practical scenario. We want to trip the circuit when Node B times out more than 2 times on a 10 second sliding window. We set the read time out to 2 seconds .
 
 ```java
