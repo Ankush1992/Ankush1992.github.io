@@ -10,7 +10,7 @@ Evolving from a single-node setup/Monolith architecture to a multi-node / Micros
 All is honky dory and dandy in a single node architecture.However,one of the first disasters you will ever face as you shift to a distributed setup is Cascading failure when one of your services shuts down or responds very slowly to requests . In turn , the fleet of services depending on this service will stop responding . 
 We circumvent this problem by using the Circuit Breaker Pattern.Martin Fowler has a fantastic [article](http://martinfowler.com/bliki/CircuitBreaker.html) explaining the concept.
 
-#Scenario
+# Scenario
 
 We will run two apps on localhost , one running on port 8080 and the other on 8081 . The one running on port 8080 will be called `Node A` and the one running on port 8081 `Node B` . For every requests that Node A receives ,it makes a `GET` requests to Node B .
 
