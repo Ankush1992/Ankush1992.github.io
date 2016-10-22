@@ -96,7 +96,7 @@ public class NodeAController {
 Now go on over to `localhost:8080/NodeA` . You will see :
 ![node a -node b-off](https://cloud.githubusercontent.com/assets/7692552/19620894/01fc5956-98a4-11e6-907c-06a833bef879.png)
 
-Very good. Lets consider another more practical scenario. We want to trip the circuit when Node B times out more than 2 times on a 10 second sliding window. We set the read time out to 2 seconds .
+Very good. Lets consider another more practical scenario. We want to trip the circuit when Node B times out more than 5 times on a 10 second sliding window. We set the read time out to 2 seconds .
 
 ```java
 @RestController
@@ -106,8 +106,8 @@ public class NodeAController {
 	@HystrixCommand(
 			fallbackMethod="fallback",
 			commandProperties = {
-					@HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",value="1600"),
-					@HystrixProperty(name="circuitBreaker.requestVolumeThreshold",value="2"),
+					@HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",value="2000"),
+					@HystrixProperty(name="circuitBreaker.requestVolumeThreshold",value="5"),
 					@HystrixProperty(name="circuitBreaker.sleepWindowInMilliseconds",value="10000")
 				}
 			)
