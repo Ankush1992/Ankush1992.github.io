@@ -54,7 +54,7 @@ Keep running Node A and shut off Node B.
 ![localhost](https://cloud.githubusercontent.com/assets/7692552/19620836/9430a8ec-98a2-11e6-91d2-26f38f71129e.png "localhost")
 
 That's no good ! We want our Node A to keep running and ideally return something in case Node B is down.
-This is where Hystrix comes in . [Here])(https://github.com/Netflix/Hystrix/wiki) is an excellent documentation explaining Hystrix in depth.
+This is where Hystrix comes in . [Here](https://github.com/Netflix/Hystrix/wiki) is an excellent documentation explaining Hystrix in depth.
 
 We set up Hystrix to monitor the calls from Node A to Node B , and execute a fallback method whenever Node B starts to lag.
 
