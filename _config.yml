@@ -26,6 +26,7 @@ locales:
     en:
       Aboutme: "About Me"
       Archives: "Archives"
+      Resume : "Resume"
       Categories: "Categories"
       Copyright_Notice: "Copyright Notice"
       Recent_Posts: "Recent Posts"
