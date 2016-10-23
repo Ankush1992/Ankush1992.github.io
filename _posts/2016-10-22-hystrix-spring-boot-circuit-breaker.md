@@ -25,7 +25,9 @@ We have 2 Controllers, one for our caller ,Node A , and one for our remote servi
 public class NodeAController {
 	
 	@GetMapping("NodeA")
-	public String makeCallToNodeB() throws Exception{
+	public String makeCallToNodeB() throws E
+
+xception{
 		return new RestTemplate()
 				.getForEntity(new URI("http://localhost:8081/NodeB"), String.class)
 				.getBody();
@@ -53,7 +55,6 @@ Open your browser and go over to `localhost:8080/NodeA` . Since both services ar
 Keep running Node A and shut off Node B. 
 ![localhost](https://cloud.githubusercontent.com/assets/7692552/19620836/9430a8ec-98a2-11e6-91d2-26f38f71129e.png "localhost")
 
-Clearly,Node B responds with its usual success message.
 
 That's no good ! We want our Node A to keep running and ideally return something in case Node B is down.
 This is where Hystrix comes in . [Here](https://github.com/Netflix/Hystrix/wiki) is an excellent documentation explaining Hystrix in depth.
