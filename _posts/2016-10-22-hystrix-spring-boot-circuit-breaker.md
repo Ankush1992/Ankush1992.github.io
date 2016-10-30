@@ -25,9 +25,7 @@ We have 2 Controllers, one for our caller ,Node A , and one for our remote servi
 public class NodeAController {
 	
 	@GetMapping("NodeA")
-	public String makeCallToNodeB() throws E
-
-xception{
+	public String makeCallToNodeB() throws Exception{
 		return new RestTemplate()
 				.getForEntity(new URI("http://localhost:8081/NodeB"), String.class)
 				.getBody();
