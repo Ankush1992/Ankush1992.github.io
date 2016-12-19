@@ -12,7 +12,7 @@ I am a 24 year old Software Engineer from New Delhi ,India. My main focus is bui
 
 I also suffer from several OCD’s , one of them being constant code refactorings. This space on the web shall be devoted to all things programming .I will be talking about anything that interests me, from everyday web development to my experimentations with other languages and frameworks.
 
-I also happen to have a B.Sc Degree in Mathematics from The University of Delhi. I like to think of myself as a Mathematician in another life.
+I also happen to have a B.Sc Degree in Mathematics from The University of Delhi.
 
 I also like to [read.](https://www.goodreads.com/ankushsharma) 
 
