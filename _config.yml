@@ -1,5 +1,5 @@
 name: Ankush Sharma
-markdown: redcarpet
+# markdown: redcarpet
 pygments: true
 github: https://github.com/ankushs92
 about: Web developer from New Delhi, India. Tools of choice are Groovy, Spring Boot, Vertx, Redis, Kafka, Cassandra amongst other things
