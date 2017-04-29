@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>{% if page.title %} {{ page.title }} {% else %} {{ site.name }} {% endif %}</title>
+        <meta name="viewport" content="width=device-width">
 
-{% include head.html %}
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
 
-<body>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="container">
 
-  {% include header.html %}
+    </head>
+    <body>
 
-  {% if site.default_column == "two" %}  
+		<div id="container">
 
-  <div class="page-content col-sm-8">
-    {{ content }}
-    {% include post_pagination.html %}
-  </div>
-  {% include sidebar.html %}
+			<div class="left">
+			    <a href="/">
+			    	<h1>{{ site.name }}</h1>
+			    </a> 
 
-  {% else %}
+				<img id="about" src="/img/IMG_0152.jpg" height="100px" width="100px" /><br />	
+				{% for i in site.urls %}
+					<a class="about" href="{{ i.url }}">{{ i.icon }}</a>
+				{% endfor %}
+				
+				{% if site.about %}
+				<div id="about">
+					<strong>about</strong><br />
+					{{ site.about }}
+				</div>
+				{% endif %}
+			</div>
 
-  <div class="page-content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </div>
-  {% include post_pagination.html %}
+			<div class="right">
+				
+				{{ content }}
+				
+				<footer>
+					&copy; {{ site.name }}
+					{% if site.github %} 
+						- <a href="{{ site.github }}">{{ site.github }}</a>
+					{% endif %}
+				</footer>
+			</div>
+		
+		</div>
 
-  {% endif %}
-
-  {% include footer.html %}
-
-</div>
-
-</body>
-
+    </body>
 </html>

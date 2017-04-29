@@ -1,43 +1,19 @@
-### Site info:
-title: Ankush Sharma's Blog
-tagline: Web Development for the sane.
-author: Ankush Sharma
-email: ankush20058@gmail.com
-description: "Web Development for the Sane." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
-keywords: "spring-boot"
-locale: en_US
-
-### Personal info and site tools info:
-github_username:  ankushs92
-disqus_shortname: ankush1992
-linkedin:  "https://in.linkedin.com/in/ankush-sharma-071208a8"
-twitter : Ankush1092
-favicon:     "https://cloud.githubusercontent.com/assets/7692552/11044617/f8b4196e-8748-11e5-82b8-d56af8915c4c.png"
-# aboutme: Do not like short about me's.
-# aboutme_photo: https://cloud.githubusercontent.com/assets/7692552/10979006/ffe995dc-841f-11e5-891b-4f294acaeacb.jpg
-google_analytics_key: UA-82816777-1
-
-### Site setting:
-ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown when ShowContactInfo == True
-default_column: "one" # blog style: two columns, if default_column != "two", you will see a one column blog.
-default_locale: "en" # blog sidebar language set, only include: English(en) and Chinese (cn)
-
-locales:
-    en:
-      Aboutme: "About Me"
-      Archives: "Archives"
-      Resume : "Resume"
-      Categories: "Categories"
-      Copyright_Notice: "Copyright Notice"
-      Recent_Posts: "Recent Posts"
-      Tags: "Tags"
-      Previous: "Older"
-      Next: "Newer"
-      PostedInCategories: "Posted in"
-      Taggedwith: "and tagged"  
-      PostDate: "on "
-
-### Build settings
-markdown: kramdown
-highlighter: rouge
-paginate: 5
+name: Ankush Sharma
+markdown: redcarpet
+pygments: true
+github: https://github.com/ankushs92
+about: Web developer from New Delhi, India. Tools of choice are Groovy, Spring Boot, Vertx, Redis, Kafka, Cassandra amongst other things
+urls:
+    - text: github
+      url: https://github.com/ankushs92
+      icon: <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+    - text: email
+      url: mailto:ankush20058@gmail.com
+      icon: <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+    - text: linkedin
+      url: https://www.linkedin.com/in/ankushs92/
+      icon: <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+    - text: goodreads
+      url: https://www.goodreads.com/ankushsharma
+      icon: <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+      
