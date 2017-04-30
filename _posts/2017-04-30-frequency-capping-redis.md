@@ -6,7 +6,7 @@ date:   2017-04-30 00:18:23
 ---
 
 
-Frequency capping is a very important concept in digital advertising. Simply put, frequency capping is a strict upper bound for an ad that can be shown to a specific user over a period of time. The period of time can be daily (24 hour period), weekly or monthly. For instance, think of an ad with its daily cap set to 5 and monthly cap set to 20. This means that a user with id 1234 should not see this particular ad more than 5 times a day and 20 times a month. For this tutorial, we will consider daily and monthly capping.
+Frequency capping is a very important concept in digital advertising. Simply put, frequency cap is a strict upper bound for an ad-banner that can be shown to a specific user over a period of time. The time period can be daily (24 hour period), weekly or monthly. For instance, think of an ad-banner with its daily cap set to 5 and monthly cap set to 20. This means that a user with id 1234 should not see this particular ad more than 5 times a day and 20 times a month. For this tutorial, we will consider daily and monthly capping.
 
 Whenever an impression is generated, the ad-server receives an impression request, which is a simple HTTP request with the user id stored in a cookie. To ensure that the user hasn't exceeded the capping limit, the ad server must compute the number of times the ad has been shown to this user on a daily, weekly and monthly basis for every request. Imagine that for a second. If an ad server gets 10000 req per second, it must calculate the daily and monthly count for this ad to this user <em> ON EVERY REQUEST 
 </em>. Fortunately, we have the right candidate for this sort of job. Redis!
