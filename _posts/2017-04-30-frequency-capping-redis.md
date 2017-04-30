@@ -6,9 +6,9 @@ date:   2017-04-30 00:18:23
 ---
 
 
-Frequency capping is a very important concept in digital advertising. Simply put, frequency capping is a strict upper bound for an ad that can be shown to a specific user over a period of time. The period of time can be daily (24 hour period), weekly or monthly. For instance, think of an ad with its daily cap set to 5 and monthly cap set to 20. This means that a user with id user_id1 should not see this particular ad more than 5 times a day and 20 times a month. For our use case, we will consider daily and monthly capping.
+Frequency capping is a very important concept in digital advertising. Simply put, frequency capping is a strict upper bound for an ad that can be shown to a specific user over a period of time. The period of time can be daily (24 hour period), weekly or monthly. For instance, think of an ad with its daily cap set to 5 and monthly cap set to 20. This means that a user with id 1234 should not see this particular ad more than 5 times a day and 20 times a month. For this tutorial, we will consider daily and monthly capping.
 
-Whenever an impression is generated, the ad-server receives the impression request, which is a simple HTTP request with the user id stored in a cookie. To ensure that the user hasn't exceeded the capping limit, the ad server must compute the number of times the ad has been shown to this user on a daily, weekly and monthly basis for every request. Imagine that for a second. If an ad server gets 10000 req per second, it must calculate the daily and monthly count for this ad to this user <em> ON EVERY REQUEST 
+Whenever an impression is generated, the ad-server receives an impression request, which is a simple HTTP request with the user id stored in a cookie. To ensure that the user hasn't exceeded the capping limit, the ad server must compute the number of times the ad has been shown to this user on a daily, weekly and monthly basis for every request. Imagine that for a second. If an ad server gets 10000 req per second, it must calculate the daily and monthly count for this ad to this user <em> ON EVERY REQUEST 
 </em>. Fortunately, we have the right candidate for this sort of job. Redis!
 
 Redis is phenomenal. It is stunningly fast, you can set it up quickly and it's easy to build a prototype. 
@@ -16,15 +16,15 @@ Redis is phenomenal. It is stunningly fast, you can set it up quickly and it's e
 This is what I look like when I think of Redis
 ![zen](https://cloud.githubusercontent.com/assets/7692552/25563041/d22fc026-2db0-11e7-9757-78c4d4d498f6.jpeg)
 
-There are are a couple of ways
+We will be evaulating two ways to get the job done with Redis.
 
 ## Hashes
 
 This would be the fastest way to do it. 
 
-Further breaking down our problem, all we need to do is maintain a impression count for a user on a daily, weekly and monthly basis for a campaign. Assume that campaign id is 1 and user id is 1234. 
+Further breaking down our problem, all we need to do is maintain a impression count for a user on a daily and monthly basis for a campaign.
 
-Our Redis keyspace contains one Hash, with the name `user_impression_counts`. Our Hash fields have the following template:
+Our Redis keyspace contains one Hash, with the name `user_impression_counts`. Our Hash keys have the following template:
 
 ```
 daily_count:user:<user_id>:campaign:<campaign_id>:date:<date_stamp>
@@ -33,7 +33,7 @@ monthly_count:user:<user_id>:campaign:<campaign_id>:month:<month_stamp>
 
 `<date_stamp>` has format `yyyyMMdd` and `<month_stamp>` has format `yyyyMM`. So for example, if the date is 2nd August, which is the 8th month of the year, then `date_stamp` = `20170802` and `month_stamp` = `201708` .
 
-Here is the python code to get the daily and monthly count.
+Here is the python code to get the daily and monthly count. I am using `redis-py` as the redis-client library.
 
 ```python
 USER_CAMPAIGN_IMPRESSION_COUNT_HASH_NAME = "user_impression_counts"
@@ -60,7 +60,7 @@ def get_monthy_impression_count_for_user(campaign_id,user_id,month_stamp):
 ```
 
 
-Now that we have the daily and monthly impressions served to this user, we can easily compare these counts against the capping limit set for our campaign in our CMS. If we haven't exceeded our capping limit, the user would be shown the ad and a impression would be generated.
+Now that we have the daily and monthly impressions served to this user, we can easily compare these counts against the capping limit set for our campaign in our CMS. If we haven't exceeded our capping limit, the user would be shown the ad and an impression would be generated.
 
 Next, let's look at how to increment our counts when we get an impression.
 
