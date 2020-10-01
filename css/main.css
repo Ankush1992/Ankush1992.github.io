@@ -56,8 +56,10 @@ a:hover {
  * /////////////////
  */
 div#container {
-    width: 700px;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5vh 20vw;
 }
 
 /**
@@ -66,8 +68,15 @@ div#container {
  * //////////////////////////////////
  */
 div.right {
-    width: 500px;
-    float: left;
+    width: 30vw;
+}
+
+div.right p {
+    text-align: justify;
+}
+
+div.right p img {
+    width: 30vw;
 }
            
 div.content {
@@ -132,23 +141,21 @@ div.right .post ul {
  * ///////////////////////////////////
  */
 div.left {
-        width: 150px;
-        margin-right: 40px;
-        margin-top: 100px;
-        float: left;
-        font-size: 11px;
-        color: #666;
+    width: 150px;
+    margin-right: 40px;
+    font-size: 11px;
+    color: #666;
 }
 
 div.left strong {
-        font-size: 16px;
-        color: #4A4A4A;
-        font-weight: normal;
+    font-size: 16px;
+    color: #4A4A4A;
+    font-weight: normal;
 }
 
 div.left div#about {
-        margin-top: 10px;
-		color: #8C8C8C;
+    margin-top: 10px;
+    color: #8C8C8C;
 }
 
 div.left img#about {
